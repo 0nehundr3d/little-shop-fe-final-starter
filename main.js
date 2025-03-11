@@ -234,6 +234,7 @@ function displayMerchantItems(event) {
 
 function getMerchantCoupons(event) {
   let merchantId = event.target.closest("article").id.split('-')[1]
+  addNewButton.classList.add("hidden")
 
   fetchData(`merchants/${merchantId}/coupons`)
   .then(couponData => {
